@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "esModuleInterop": true,
+    "target": "ES2017",
+    "noImplicitAny": true,
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "."
+  },
+  "include": ["src/**/*", "test/**/*"]
+}
