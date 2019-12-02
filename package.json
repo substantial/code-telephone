@@ -5,6 +5,10 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "scripts": {
+    "go": "node_modules/ts-node-dev/bin/ts-node-dev replace.ts"
   }
 }
