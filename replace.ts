@@ -5,7 +5,7 @@ const letter =
 
 const parseText = async (text: string) => {
   const words = text.split(' ')
-  const thing = await words.map(async word => {
+  const replaced = await words.map(async word => {
     const matches = word.match(/\[(\w+)-(\w+)\]/i)
     if (Array.isArray(matches) && matches.length) {
       const wordToReplace = matches[1]
@@ -16,15 +16,15 @@ const parseText = async (text: string) => {
     return word
   })
 
-  const parsed = await Promise.all(thing)
+  const parsed = await Promise.all(replaced)
   return parsed.join(' ')
 }
 
 async function run() {
-  const t = await parseText(letter)
-  console.log(t)
+  const text = await parseText(letter)
+  console.log(text)
 
-  return t
+  return text
 }
 
 run()
