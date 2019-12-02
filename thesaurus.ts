@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const API_KEY = '26ab94601ce10e725e86ddc1891f132e'
+const API_KEY = ''
 
 export type WordType = 'noun' | 'verb' | 'adjective' | 'adverb'
 
