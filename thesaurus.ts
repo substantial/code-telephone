@@ -1,0 +1,24 @@
+const axios = require('axios')
+
+const API_KEY = '26ab94601ce10e725e86ddc1891f132e'
+
+export type WordType = 'noun' | 'verb' | 'adjective' | 'adverb'
+
+export const getSynonym = async (word: string, type: WordType = 'noun') => {
+  return axios
+    .get(`https://words.bighugelabs.com/api/2/${API_KEY}/${word}/json`)
+    .then(res => {
+      const results = res.data[type]
+      if (!results) {
+        throw new Error(`no ${type} matches for "${word}"`)
+      }
+      const synonyms = results.syn
+      const similarWords = results.sim
+      if (!(synonyms || similarWords)) {
+        throw new Error(`no ${type} synonyms for "${word}"`)
+      }
+
+      return (results.syn && results.syn[0]) || (results.sim && results.sim[0])
+    })
+    .catch(err => console.log(`error! ${err.message}`))
+}
