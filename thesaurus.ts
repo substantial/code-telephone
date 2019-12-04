@@ -22,7 +22,6 @@ export const getSynonym = async (word: string, type: WordType = 'noun') => {
         throw new Error(`no ${type} synonyms for "${word}"`)
       }
 
-      // TODO: try returning a random synonym or similar word instead of the first
       return (results.syn && results.syn[0]) || (results.sim && results.sim[0])
     })
     .catch(err => console.log(`error! ${err.message}`))
