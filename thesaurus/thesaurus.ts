@@ -1,5 +1,7 @@
 import axios from 'axios'
 import dotenv from 'dotenv'
+import { random } from 'lodash'
+
 dotenv.config({
   path: `.env`
 })
@@ -16,13 +18,15 @@ export const getSynonym = async (word: string, type: WordType = 'noun') => {
       if (!results) {
         throw new Error(`no ${type} matches for "${word}"`)
       }
+
       const synonyms = results.syn
       const similarWords = results.sim
       if (!(synonyms || similarWords)) {
         throw new Error(`no ${type} synonyms for "${word}"`)
       }
 
-      return (results.syn && results.syn[0]) || (results.sim && results.sim[0])
+      return (synonyms && synonyms[random(0, synonyms.length - 1)]) ||
+        (similarWords && similarWords[random(0, similarWords.length - 1)])
     })
     .catch(err => console.log(`error! ${err.message}`))
 }
