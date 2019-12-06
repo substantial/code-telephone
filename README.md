@@ -30,4 +30,4 @@ Highlights nouns in the text.
 
 Makes the text sound like LOLCAT
 
-`yarn test lolcat/lolcat.test.ts`
+`yarn go lolcat/index.ts`
