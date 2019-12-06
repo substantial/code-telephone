@@ -15,8 +15,8 @@ See the `replaceWithSynonyms` test in `theasaurus.test.js` for an example.
 
 ## Running
 
-* `yarn test` to run tests
-* `yarn go <filename>` to execute a TS file
+- `yarn test` to run tests
+- `yarn go <filename>` to execute a TS file
 
 ## Thesaurus
 
@@ -26,3 +26,9 @@ Get an API key by following the instructions at https://words.bighugelabs.com/ac
 Set your key as `API_KEY` in a `.env` file
 
 `yarn go thesaurus/index.ts`
+
+## Noun-finder
+
+Highlights nouns in the text.
+
+`yarn go noun-highlighter/index.ts`
