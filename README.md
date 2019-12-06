@@ -11,7 +11,7 @@ Let's invent and apply transformations to some text. Transform the text any whic
 
 `yarn install`
 
-The repo includes `lodash` for convenience and the handy part-of-speech analyzer (WordPOS)[https://www.npmjs.com/package/wordpos]. There is also a snippet from a real Victorian love letter in `example-text.ts`. Make of that what you will.
+The repo includes `lodash` for convenience and the handy part-of-speech analyzer [WordPOS](https://www.npmjs.com/package/wordpos). There is also a snippet from a real Victorian love letter in `example-text.ts`. Make of that what you will.
 
 ## Running
 
