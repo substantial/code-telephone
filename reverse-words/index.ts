@@ -1,8 +1,8 @@
-import { reverseThirdWords } from './reverse'
+import { replace } from './replace'
 import { LETTER } from './text'
 
 const transformText = text => {
-  const transformedText = reverseThirdWords(text)
+  const transformedText = replace(text)
   console.log(transformedText)
 }
 
