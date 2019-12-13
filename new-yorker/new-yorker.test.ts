@@ -24,3 +24,13 @@ it('Replaces ALK with AWK', () => {
   const test = 'I talk to dead people.'
   expect(newYorker(test)).toBe('I tawk to dead people.')
 })
+
+it('Replaces LE with EL', () => {
+  const test = 'I talk to dead people.'
+  expect(newYorker(test)).toBe('I tawk to dead peopel.')
+})
+
+it('Replaces LE with EL', () => {
+  const test = 'I talk to dead people.'
+  expect(newYorker(test)).toBe('I tawk tah dead peopel.')
+})
