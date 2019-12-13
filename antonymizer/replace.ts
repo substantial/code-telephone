@@ -1,6 +1,6 @@
 const antonyms = {
-  above: 'below',
   below: 'above',
+  'above,': 'below,',
   far: 'near',
   near: 'far',
   from: 'to',
@@ -18,15 +18,8 @@ const antonyms = {
 export const replace = (text: string) => {
   return text
     .split(' ')
-        .map(word => {
-
-            Object.forEach((part) => {
-                if
-            })
-        if (word.includes(antonyms[word]) {
-        return antonyms[word]
-      }
-      return word
+    .map(word => {
+      return antonyms[word] ? antonyms[word] : word
     })
     .join(' ')
 }
