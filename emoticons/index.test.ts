@@ -14,3 +14,10 @@ it('converts any words that are text emoticons into text emoticon', () => {
   expect(converter('')).toEqual('')
   expect(converter('huh?')).toEqual('huh?')
 })
+
+it('converts in a loop', () => {
+  expect(converter('magic')).toEqual('(⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿')
+  expect(converter('magic')).toEqual('(∩ᄑ_ᄑ)⊃━☆ﾟ*･｡*･:≡( ε:)')
+  expect(converter('magic')).toEqual('(/￣ー￣)/~~☆’.･.･:★’.･.･:☆')
+  expect(converter('magic')).toEqual('(⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿')
+})
