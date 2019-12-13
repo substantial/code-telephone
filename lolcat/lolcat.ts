@@ -1,7 +1,7 @@
 import { flow } from 'lodash'
 import WordPOS from 'wordpos'
 
-const wordPOS = new WordPOS({});
+const wordPOS = new WordPOS({})
 
 // Speak lolcat: https://speaklolcat.com/
 
@@ -15,6 +15,9 @@ const r = text => text.replace(/\bARE/g, 'R')
 const wif = text => text.replace(/WITH/g, 'WIF')
 const wuznot = text => text.replace(/WASN'T/g, 'WUZ NOT')
 const listenin = text => text.replace(/LISTENING/g, 'LISTENIN')
+const reverseGreaterThanFive = text => {
+  text.match(/[A-Za-z]{5}/g).forEach(word => text.replace())
+}
 
 export default (text: string) => {
   return flow([
@@ -28,5 +31,6 @@ export default (text: string) => {
     wif,
     wuznot,
     listenin,
+    reverseGreaterThanFive
   ])(text)
 }
