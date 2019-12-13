@@ -15,6 +15,17 @@ const r = text => text.replace(/\bARE/g, 'R')
 const wif = text => text.replace(/WITH/g, 'WIF')
 const wuznot = text => text.replace(/WASN'T/g, 'WUZ NOT')
 const listenin = text => text.replace(/LISTENING/g, 'LISTENIN')
+const reverseFiveOrMore = text => {
+  const words = text.split(' ')
+  return words.map((word, idx) => {
+    let alphaRegEx = new RegExp(/a-zA-Z/)
+    if(word.length >= 5) {
+      return Array.from(word).reverse().join('')
+    } else {
+      return word
+    }
+  }).join(' ')
+}
 
 export default (text: string) => {
   return flow([
@@ -28,5 +39,6 @@ export default (text: string) => {
     wif,
     wuznot,
     listenin,
+    reverseFiveOrMore
   ])(text)
 }
