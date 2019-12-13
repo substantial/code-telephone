@@ -1,4 +1,4 @@
-const converter = (text: string): string => {}
+import converter from '.'
 
 it('converts any words that are text emoticons into text emoticon', () => {
   expect(converter('surprised')).toEqual(':0')
@@ -8,7 +8,7 @@ it('converts any words that are text emoticons into text emoticon', () => {
   expect(converter('laugh')).toEqual('XD')
   expect(converter('laughing out loud')).toEqual('=D')
   expect(converter('lol')).toEqual('=D')
-  expect(converter('I was surpised to see you laughing out loud!!')).toEqual(
+  expect(converter('I was surprised to see you laughing out loud!!')).toEqual(
     'I was :0 to see you =D!!'
   )
   expect(converter('')).toEqual('')
