@@ -21,16 +21,16 @@ it('Replaces UR with UH', () => {
 })
 
 it('Replaces ALK with AWK', () => {
-  const test = 'I talk to dead people.'
-  expect(newYorker(test)).toBe('I tawk to dead people.')
+  const test = 'I talk.'
+  expect(newYorker(test)).toBe('I tawk.')
 })
 
 it('Replaces LE with EL', () => {
-  const test = 'I talk to dead people.'
-  expect(newYorker(test)).toBe('I tawk to dead peopel.')
+  const test = 'Dead people.'
+  expect(newYorker(test)).toBe('Dead peopel.')
 })
 
-it('Replaces LE with EL', () => {
-  const test = 'I talk to dead people.'
-  expect(newYorker(test)).toBe('I tawk tah dead peopel.')
+it('Replaces TO with TAHs', () => {
+  const test = 'To Potato.'
+  expect(newYorker(test)).toBe('Tah Potatah.')
 })

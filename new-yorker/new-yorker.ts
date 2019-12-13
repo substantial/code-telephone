@@ -3,7 +3,9 @@ const translations = {
   ere: 'eah',
   ought: 'awwt',
   ur: 'uh',
-  alk: 'awk'
+  alk: 'awk',
+  people: 'peopel',
+  to: 'tah'
 }
 
 export default (text: string) =>
@@ -12,8 +14,9 @@ export default (text: string) =>
     .map(word => {
       let value = word
       Object.keys(translations).forEach(part => {
-        if (word.includes(part)) {
-          value = word.replace(part, translations[part])
+        const pattern = new RegExp(part, 'gi')
+        if (word.match(pattern)) {
+          value = word.replace(pattern, translations[part])
         }
       })
       return value
