@@ -1,7 +1,9 @@
 const translations = {
+  er: 'ah',
   ere: 'eah',
   ought: 'awwt',
-  er: 'ah'
+  ur: 'uh',
+  alk: 'awk'
 }
 
 export default (text: string) =>
