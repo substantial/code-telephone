@@ -2,7 +2,7 @@ import { replace } from './replace'
 import { LETTER } from './text'
 
 describe('replace', () => {
-  it('replaces above with below and vice versa', () => {
+  it.only('replaces above with below and vice versa', () => {
     expect(replace('as above, so below')).toBe('as below, so above')
   })
 
