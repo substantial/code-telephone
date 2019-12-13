@@ -20,3 +20,11 @@ test('Replace "YOUR" with "UR", "ARE" with "R", "WITH" with "WIF", "WASNT" with 
     'UR SECRETS R SAFE WIF ME... I WUZ NOT EVEN LISTENIN.'
   )
 })
+
+test('Reverse any word with more than 5 characters', () => {
+  expect(lolcat(SECRETS)).toBe(
+    'UR STERCES R SAFE WIF EM... I WUZ NOT EVEN NINETSIL.'
+  )
+})
+
+

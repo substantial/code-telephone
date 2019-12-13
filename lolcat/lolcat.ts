@@ -1,4 +1,7 @@
 import { flow } from 'lodash'
+import WordPOS from 'wordpos'
+
+const wordPOS = new WordPOS({});
 
 // Speak lolcat: https://speaklolcat.com/
 
@@ -24,6 +27,6 @@ export default (text: string) => {
     r,
     wif,
     wuznot,
-    listenin
+    listenin,
   ])(text)
 }
