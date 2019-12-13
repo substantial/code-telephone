@@ -1,14 +1,17 @@
-// import { LETTER } from './text'
-// var WordPOS = require('wordpos')
-
-// const wordpos = new WordPOS()
-
-// let lemmas
-// wordpos.getNouns(LETTER, () => {
-//   console.log('Good luck :)')
-//   console.log('Sorry.')
-// })
+const translations = {
+  cooperate: 'coöperate',
+  reelect: 'reëlect',
+  naive: 'naïve'
+}
 
 export default (text: string) => {
   return text
+    .split(' ')
+    .map(word => {
+      if (translations[word]) {
+        return translations[word]
+      }
+      return word
+    })
+    .join(' ')
 }
