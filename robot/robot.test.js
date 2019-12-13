@@ -11,7 +11,7 @@ test('Replace "SERI0USLY" with "CHEEZEBURGER', () => {
 
 test('Set SLITHERY_SNAKES t0 r0b0t v0ice', () => {
   expect(
-    robot(SLITHERY_SNAKES).toBe(
+    expect(robot(SLITHERY_SNAKES)).toBe(
       'W3 4R3 50M3 53R10U5LY 5L1TH3RY 5N4K3Z. 50 5N34KY.'
     )
   )
